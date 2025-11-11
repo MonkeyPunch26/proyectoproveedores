@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configuración — Mini-ERP</title>
+  <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏢 Mini-ERP — Proveedores & Licitaciones</h1>
+      <nav class="topnav">
+        <a href="./index.html">🏠 Inicio</a>
+        <a href="./providers.html">👥 Proveedores</a>
+        <a href="./tenders.html">📑 Licitaciones</a>
+        <a href="./settings.html">⚙️ Configuración</a>
+      </nav>
+    </header>
+    <div class="content">
+      
+<div class="grid">
+  <div class="card">
+    <h3>Categorías</h3>
+    <div class="row">
+      <div><label>Nueva categoría</label><input id="newCategory" placeholder="Ej: Tecnología"></div>
+      <div style="align-self:end"><button class="btn btn-primary" id="btnAddCategory">Agregar</button></div>
+    </div>
+    <ul id="catList"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Subcategorías</h3>
+    <div class="row">
+      <div><label>Categoría</label><select id="categoryForSubcategory"></select></div>
+      <div><label>Nombre</label><input id="newSubcategory" placeholder="Ej: Software"></div>
+      <div style="align-self:end"><button class="btn btn-primary" id="btnAddSubcategory">Agregar</button></div>
+    </div>
+    <ul id="subList"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Regiones</h3>
+    <div class="row">
+      <div><label>Nueva región</label><input id="newRegion" placeholder="Ej: América del Sur"></div>
+      <div style="align-self:end"><button class="btn btn-primary" id="btnAddRegion">Agregar</button></div>
+    </div>
+    <ul id="regList"></ul>
+  </div>
+
+  <div class="card">
+    <h3>Países</h3>
+    <div class="row">
+      <div><label>Región</label><select id="regionForCountry"></select></div>
+      <div><label>Nombre</label><input id="newCountry" placeholder="Ej: Chile"></div>
+      <div style="align-self:end"><button class="btn btn-primary" id="btnAddCountry">Agregar</button></div>
+    </div>
+    <ul id="countryList"></ul>
+  </div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <button class="btn" id="btnResetDB">🔄 Restablecer datos de ejemplo</button>
+  <p class="small">Esto reemplaza tus datos por los de ejemplo en este navegador.</p>
+</div>
+
+    </div>
+  </div>
+  <script src="./static/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', APP.initSettingsPage);</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Licitaciones — Mini-ERP</title>
+  <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏢 Mini-ERP — Proveedores & Licitaciones</h1>
+      <nav class="topnav">
+        <a href="./index.html">🏠 Inicio</a>
+        <a href="./providers.html">👥 Proveedores</a>
+        <a href="./tenders.html">📑 Licitaciones</a>
+        <a href="./settings.html">⚙️ Configuración</a>
+      </nav>
+    </header>
+    <div class="content">
+      
+<div class="card">
+  <h3>Nueva licitación</h3>
+  <form id="tenderForm">
+    <div class="row">
+      <div><label>Nombre</label><input id="tenderName" placeholder="Licitación X"></div>
+      <div><label>Inicio</label><input type="date" id="tenderStartDate"></div>
+      <div><label>Término</label><input type="date" id="tenderEndDate"></div>
+    </div>
+    <div class="row">
+      <div><label>Descripción</label><textarea id="tenderDescription" rows="3" placeholder="Detalle opcional"></textarea></div>
+    </div>
+    <div style="margin-top:10px"><button class="btn btn-primary">Crear</button></div>
+  </form>
+</div>
+
+<div class="card">
+  <div class="row" style="grid-template-columns:1fr 200px">
+    <h3>Listado</h3>
+    <input id="tenderSearch" placeholder="Buscar...">
+  </div>
+  <table id="tendersTable">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nombre</th><th>Descripción</th><th>Inicio</th><th>Término</th><th>Proveedores</th><th></th>
+      </tr>
+    </thead>
+    <tbody id="tendersBody"></tbody>
+  </table>
+</div>
+
+<div class="modal" id="assignModal">
+  <div class="modal-content">
+    <button class="close" id="closeAssign">&times;</button>
+    <div id="assignModalBody"></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <script src="./static/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', APP.initTendersPage);</script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial,sans-serif;margin:0;background:#0b1220;color:#e6edf3}
+.container{max-width:1100px;margin:0 auto;padding:16px}
+header h1{margin:.2rem 0}
+header .topnav{margin:12px 0;display:flex;gap:12px;flex-wrap:wrap}
+.topnav a{color:#e6edf3;text-decoration:none;background:#223;padding:8px 10px;border-radius:8px}
+.topnav a:hover{background:#334}
+.card{background:#141a2a;padding:12px;border-radius:10px;box-shadow:0 0 0 1px #263248 inset;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.small{opacity:.75;font-size:.9em}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:.85em}
+.badge-info{background:#243a5a}
+.badge-success{background:#1f5a2e}
+.btn{border:0;border-radius:8px;padding:8px 10px;cursor:pointer}
+.btn-primary{background:#3b82f6;color:white}
+.btn-danger{background:#ef4444;color:white}
+.btn:disabled{opacity:.6;cursor:not-allowed}
+table{width:100%;border-collapse:collapse;background:#0f1626}
+th,td{padding:10px;border-bottom:1px solid #263248}
+th{text-align:left;background:#0c1322}
+input,select,textarea{width:100%;background:#0f1626;border:1px solid #263248;color:#e6edf3;border-radius:8px;padding:8px}
+label{display:block;margin:.5rem 0 .25rem}
+form .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);align-items:center;justify-content:center;padding:16px}
+.modal.active{display:flex}
+.modal .modal-content{background:#0f1626;max-width:700px;width:100%;border-radius:12px;padding:16px;position:relative}
+.modal .close{position:absolute;right:12px;top:8px;background:transparent;border:0;color:#e6edf3;font-size:24px;cursor:pointer}
+.provider-list{display:flex;flex-direction:column;gap:10px}
+.provider-item{display:flex;align-items:center;justify-content:space-between;background:#141a2a;padding:10px;border-radius:10px}

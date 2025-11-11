@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio — Mini-ERP</title>
+  <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏢 Mini-ERP — Proveedores & Licitaciones</h1>
+      <nav class="topnav">
+        <a href="./index.html">🏠 Inicio</a>
+        <a href="./providers.html">👥 Proveedores</a>
+        <a href="./tenders.html">📑 Licitaciones</a>
+        <a href="./settings.html">⚙️ Configuración</a>
+      </nav>
+    </header>
+    <div class="content">
+      
+<div class="grid">
+  <div class="card"><h3>👥 Proveedores</h3><p><strong id="statProviders">0</strong></p></div>
+  <div class="card"><h3>📑 Licitaciones</h3><p><strong id="statTenders">0</strong></p></div>
+  <div class="card"><h3>🔗 Asignaciones</h3><p><strong id="statAssigned">0</strong></p></div>
+</div>
+
+    </div>
+  </div>
+  <script src="./static/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', APP.initIndexPage);</script>
+</body>
+</html>

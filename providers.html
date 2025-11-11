@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proveedores — Mini-ERP</title>
+  <link rel="stylesheet" href="./static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🏢 Mini-ERP — Proveedores & Licitaciones</h1>
+      <nav class="topnav">
+        <a href="./index.html">🏠 Inicio</a>
+        <a href="./providers.html">👥 Proveedores</a>
+        <a href="./tenders.html">📑 Licitaciones</a>
+        <a href="./settings.html">⚙️ Configuración</a>
+      </nav>
+    </header>
+    <div class="content">
+      
+<div class="card">
+  <h3>Nuevo proveedor</h3>
+  <form id="providerForm">
+    <div class="row">
+      <div><label>Nombre</label><input id="providerName" placeholder="Proveedor S.A."></div>
+      <div><label>Categoría</label><select id="providerCategory"></select></div>
+      <div><label>Subcategoría</label><select id="providerSubcategory"></select></div>
+      <div><label>Región</label><select id="providerRegion"></select></div>
+      <div><label>País</label><select id="providerCountry"></select></div>
+      <div><label>Teléfono</label><input id="providerPhone" placeholder="+56 9 1234 5678"></div>
+    </div>
+    <div style="margin-top:10px"><button class="btn btn-primary">Agregar</button></div>
+  </form>
+</div>
+
+<div class="card">
+  <div class="row" style="grid-template-columns:1fr 200px">
+    <h3>Listado</h3>
+    <input id="providerSearch" placeholder="Buscar...">
+  </div>
+  <table id="providersTable">
+    <thead>
+      <tr>
+        <th>ID</th><th>Nombre</th><th>Categoría</th><th>Subcategoría</th><th>País</th><th>Teléfono</th><th></th>
+      </tr>
+    </thead>
+    <tbody id="providersBody"></tbody>
+  </table>
+</div>
+
+<div class="modal" id="commentsModal">
+  <div class="modal-content">
+    <button class="close" id="closeComments">&times;</button>
+    <div id="commentsModalBody"></div>
+  </div>
+</div>
+
+    </div>
+  </div>
+  <script src="./static/app.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', APP.initProvidersPage);</script>
+</body>
+</html>
